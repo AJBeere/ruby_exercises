@@ -1,15 +1,5 @@
 def ascii_value(string)
-	chars = string.split("")
-	value = 0
-
-	chars.each do |char|
-		value += char.ord
-	end
-
-	value
+	sum = 0
+	string.each_char { |char| sum += char.ord }
+	sum
 end
-
-p ascii_value('Four score')
-p ascii_value('Launch School') 
-p ascii_value('a')
-p ascii_value('') 
